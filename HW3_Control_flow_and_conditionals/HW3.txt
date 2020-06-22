@@ -1,0 +1,43 @@
+#task1
+import calendar
+year=1998 #or year=int(input('Enter year: '))
+calculation=year/100
+if calculation==year//100:
+    century=int(year/100)
+else:
+    century=int(year/100)+1
+print(century, 'century')
+if calendar.isleap(year) is True:
+    print(year, 'is a leap year')
+else:
+    print(year, 'is not a leap year')
+#task2
+option=input('Enter what type of figure you want to calculate - \n "triangle", "rectangle" or "circle": ')
+print('You have decided to calculate:', option)
+import math
+if option=='circle':
+    r=float(input('Enter radius: '))
+    s=math.pi * r**2
+    print('Square =', s)
+elif option=='rectangle':
+    a=float(input('Enter side a: '))
+    b=float(input('Enter side b: '))
+    s=(a+b) * 2
+    print('Square =', s)
+elif option=='triangle':
+    a=float(input('Enter side a: '))
+    b=float(input('Enter side b: '))
+    c=float(input('Enter side c: '))
+    p=(a+b+c)/2
+    s=math.sqrt(p*(p-a)*(p-b)*(p-c))
+    print('Square =', s)
+else:
+    print('You have made some mistake while entering value')
+#task3
+number=int(input('Enter your number='))
+if number > 0:
+    print('positive,', len(str(number)), '-digit')
+elif number < 0:
+    print('negative,', len(str(abs(number))), '-digit')
+else:
+    print('Value is 0')
