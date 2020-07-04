@@ -56,3 +56,45 @@ print('%-10s %-1s %-46s %1s' %(e, w, 46*o, w))
 print('%-10s %-1s %-46s %1s' %(e, w, 46*o, w))
 print('%-10s %-1s %-46s %1s' %(e, w, 46*o, w))
 print('%-10s %-50s' %(e, 50*w))
+
+#task5
+p = 10
+h = 20
+total_sum = 0
+count = 0
+product = 1
+
+while True:
+    number = int(input('Enter your number - '))
+    if number < p:
+        total_sum = total_sum + number
+    elif number > h:
+        product = product * number
+    elif h > number > p:
+        count = count + 1
+    elif number == p or number == h:
+        print('Total sum = ', total_sum)
+        print('Amount of number between "p" and "h" = ', count)
+        if product == 1:
+            print('Numbers more than "h" were not entered')
+        else:
+            print('Total product = ', product)
+        break
+
+#task6
+count_neg = 0
+count_pos = 0
+
+while True:
+    number = int(input('Enter your number = '))
+    if number < 0:
+        count_neg = count_neg + 1
+    elif number > 0:
+        count_pos = count_pos + 1
+    elif number == 0:
+        sum_numbers = count_neg + count_pos
+        percent_neg = count_neg * 100 / sum_numbers
+        percent_pos = 100 - percent_neg
+        print('Percentage of positive numbers = %-3.1f' %percent_pos, '%')
+        print('Percentage of negative numbers = %-3.1f' %percent_neg, '%')
+        break
